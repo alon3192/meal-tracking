@@ -1,0 +1,28 @@
+<div class="preparationTime_div">
+    <h3>preparation Time For This Ration:</h3>
+    <h3 *ngIf="inProcess()" class="time">{{minutes}} : {{seconds}}&#160;/&#160;</h3>
+    <h3 class="time">{{getPreparationTime()}}</h3>
+    <h3 *ngIf="isrationReadey()" class="done">Ready!</h3>
+</div>
+<div class="card">
+    <h4>{{ ration.name }}</h4>
+    <div class="price">
+        <h5>{{ totalPrice }}&#8362;</h5>
+    </div>
+    <div class="container_inside">
+        <div class="img_div">
+            <img src="{{ ration.imageUrl }}" alt="">
+        </div>
+        <h3 class="extras_head" *ngIf="hasExtras()">Extras</h3>
+        <h3 class="extras_head no_extra" *ngIf="!hasExtras()">No Extras Added</h3>
+        <div class="extras">
+            <ul>
+                <div class="li_div" *ngFor="let extra of ration.extras">
+                    <li><span>{{extra}}</span></li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div> 
+
+

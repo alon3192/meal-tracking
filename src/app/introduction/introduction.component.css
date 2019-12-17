@@ -1,0 +1,26 @@
+.introduction {
+    padding-left: 15%;
+    padding-right: 15%;  
+}
+
+.border {
+    border: black 1px solid;
+    margin-top: 10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    padding: 7px;
+    background: white;
+}
+
+.introduction p {
+    font-weight: lighter;
+    font-family: 'Righteous', cursive;
+    text-shadow: -1px -1px rgb(179, 255, 0), 1px 1px rgb(0, 145, 170), -3px 0 4px #000;
+}
+
+@media(max-width : 820px) {
+    
+    .introduction {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}

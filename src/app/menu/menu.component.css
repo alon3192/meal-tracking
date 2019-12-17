@@ -1,0 +1,55 @@
+.menu {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.border {
+    border: black 1px solid;
+    margin-top: 10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    padding: 7px;
+    background: white;
+    box-sizing: border-box;
+}
+
+.menu h2 {
+    text-align: center;
+    text-shadow: -1px -1px black, 1px 1px #a00, -3px 0 4px #000;
+    font-family: 'Righteous', cursive;
+    color: black;
+    font-weight: lighter;
+    box-shadow: none;
+    margin: 0; 
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.head_line {
+    background: rgb(222, 222, 222)
+}
+.head_line h3 {
+    padding: 3px;
+    padding-left: 20px;
+    font-family: 'Solway', serif;
+}
+
+@media(max-width : 822px) {
+    
+    .container {
+        justify-content: center;
+    }
+
+}
+
+
+@media(max-width : 820px) {
+    
+    .menu {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+}

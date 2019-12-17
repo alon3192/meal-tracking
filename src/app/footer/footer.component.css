@@ -1,0 +1,48 @@
+.footer {
+    width: 100%;
+    height: 50px;
+    background: rgb(48, 47, 44);
+    position: relative;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+.p_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    padding: 8px;
+    text-decoration: none;
+    margin: 0;
+    padding-top: 20px;
+}
+.footer p:hover{
+    color: navy;
+}
+#resume {
+    cursor: pointer;
+}
+
+@media(max-width : 820rem) {
+    
+    .footer {
+        height: 85px;
+        z-index: 1;
+    }
+    
+    .p_footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p_footer p {
+        margin: 0;
+        padding: 10px;
+    }
+    
+}
+

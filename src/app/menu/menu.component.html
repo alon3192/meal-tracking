@@ -1,0 +1,34 @@
+<div class="menu">
+    <div class="border">
+        <h2>Pick the rations you want to order</h2>
+        <div class="head_line">
+            <h3>First-rations</h3>
+        </div>
+        <div class="container">
+        <app-card-ration *ngFor="let ration of rationViewFirst"
+            [rationView]="ration">
+        </app-card-ration> 
+        </div>
+        <div class="head_line">
+            <h3>Main-Rations</h3>
+        </div>
+        <div class="container">
+        <app-card-ration *ngFor="let ration of rationViewMain"
+            [rationView]="ration">
+        </app-card-ration>
+        </div>
+    </div>
+    <div class="border"> 
+        <h2>Pick the beverages you want to order</h2>
+        <div class="head_line">
+                <h3>Beverages</h3>
+        </div>
+        <div class="container">
+            <app-card-beverage *ngFor="let beverage of beverages"
+            [beverage]="beverage">
+            </app-card-beverage>
+        </div>
+    </div> 
+</div>   
+   
+

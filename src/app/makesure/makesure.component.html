@@ -1,0 +1,8 @@
+<div class="toast" [ngClass]="hasPushed()">
+    <h3>Are you sure you want to confirm the order?</h3>
+    <div class="btns_div">
+        <button (click)="onClick(true)" id="yes">Yes</button>
+        <button (click)="onClick(false)" id="no">No</button>
+    </div>
+</div>
+<div class="disabled_screen" [ngClass]="enableScreen()"></div>

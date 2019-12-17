@@ -1,0 +1,12 @@
+<div class="card" [ngClass]="{picked:isPicked}">
+        <div class="details">
+            <input class="pick" type="checkbox" (click)="pickBeverage($event)" [disabled]="isOrdered"> 
+            <h2 class="price">{{beverage.price}}&#8362;</h2>
+        </div>
+            
+        <h2 class="name">{{beverage.name}}</h2>
+      <div class="img_div">
+          <img src="{{ beverage.imageUrl }}" alt="">
+      </div>  
+</div>
+    

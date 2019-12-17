@@ -1,0 +1,37 @@
+<div class="order" *ngIf="hasOrdered()">
+    <div class="border">
+    <div class="head_line" *ngIf="hasOrdered()">
+            <h3>My-Order</h3>
+        </div>
+        <div class="head_line_sub" *ngIf="hasRations()">
+            <h3>Meal</h3>
+        </div>
+        <div class="container">
+        <app-ration-ordered *ngFor="let ration of myOrder.rations; let i=index"
+                [ration]="ration"
+                [timeToWait]="sumTimeCurrent[i]">
+            </app-ration-ordered> 
+        </div>
+        <div class="head_line_sub" *ngIf="hasBeverages()">
+            <h3>Beverages</h3>
+        </div>
+        <div class="container container_beverages">
+            <app-beverage-ordered *ngFor="let beverage of myOrder.beverages"
+                [beverage]="beverage">
+            </app-beverage-ordered> 
+        </div>
+        
+    <div class="head_line_sub end" *ngIf="hasRations()">
+        <h3>The Price Of Your Order : {{ myOrder.totalPrice }}&#8362;</h3>
+        <h3>Time of arrival of your order (including shipping) : {{ myOrder.preparationTime+15 }}:00 Minutes</h3>
+        </div>
+        <div class="btn_div" *ngIf="hasRations()">
+        <button class="btn_order" (click)="onOrderNow()" [disabled]="isOrdered">Order Now!</button>  
+        </div>
+    </div>
+    <app-toast *ngIf="presentToast"
+        [totalPrice]="myOrder.totalPrice">
+    </app-toast>
+    <app-makesure *ngIf="makeSureMessage"></app-makesure>
+
+</div>

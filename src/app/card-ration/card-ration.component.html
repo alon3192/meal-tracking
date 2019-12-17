@@ -1,0 +1,21 @@
+<div class="card" [ngClass]="{picked:isPicked}">
+    <div class="details">
+        <input class="pick" type="checkbox" (click)="pickRation($event)" [disabled]="isOrdered"> 
+        <h2 class="price">{{rationView.price}}&#8362;</h2>
+    </div>
+        
+    <h2 class="name">{{rationView.name}}</h2>
+  <div class="img_div">
+      <img src="{{ rationView.imageUrl }}" alt="">
+  </div>
+
+  <div class="checkbox_div">
+    <div *ngFor="let extra of rationView.extras">
+        <input type="checkbox" [checked]= "getCheckboxMode()" [disabled]="!isPicked" name={{extra}} value={{extra}} (click)="pickExtra($event)"> {{extra}} 
+    </div>
+  </div>
+
+</div>
+
+
+
