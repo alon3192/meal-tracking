@@ -1,0 +1,33 @@
+[
+    {
+        "name" : "Cola",
+        "imageUrl" : "../../assets/images/cola.png",
+        "price" : 10
+    },
+    {
+        "name" : "Fanta",
+        "imageUrl" : "../../assets/images/fanta.png",
+        "price" : 9
+    },
+    {
+        "name" : "Water",
+        "imageUrl" : "../../assets/images/water.png",
+        "price" : 8
+    },
+    {
+        "name" : "Beer",
+        "imageUrl" : "../../assets/images/beer.png",
+        "price" : 12
+    },
+    {
+        "name" : "Nestea",
+        "imageUrl" : "../../assets/images/nestea.png",
+        "price" : 10
+    },
+    {
+        "name" : "Soda",
+        "imageUrl" : "../../assets/images/soda.png",
+        "price" : 8
+    }
+
+]

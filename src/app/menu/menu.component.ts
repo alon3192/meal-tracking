@@ -22,10 +22,12 @@ export class MenuComponent implements OnInit {
   
 
   ngOnInit() {
-    
-    this.rationsView = this.dataService.getRationsView();
+
+    setTimeout(()=>{    
+      this.rationsView = this.dataService.getRationsView();
     this.beverages = this.dataService.getBeverages();
     this.sortCategory();
+    }, 100);
     
     
   }

@@ -4,13 +4,22 @@ import { Ration } from './ration.model';
 import { Beverage } from './beverage.model';
 import { Order } from './order.model';
 import { Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { 
+    
+
+    this.setRationsView();
+    this.setBeverages();
+  }
+  copyRations = [];
+  rationsView: RationView[] = [];
   orderChanged = new Subject<Order>();
   myOrder:Order = new Order([], [] , 0, 0);
   userRations:Ration[] = [];
@@ -21,50 +30,28 @@ export class DataService {
   minPriceToOrder = 80;
   toastModeChanged = new Subject<boolean>();
 
-  beverages:Beverage[] = [new Beverage("Cola","../../assets/images/cola.png", 10),
-                          new Beverage( "Fanta", "../../assets/images/fanta.png", 9),
-                          new Beverage( "Water", "../../assets/images/water.png", 8),
-                          new Beverage( "Beer","../../assets/images/beer.png" ,12),
-                          new Beverage( "Nestea", "../../assets/images/nestea.png", 10),
-                          new Beverage( "Soda", "../../assets/images/soda.png", 8)];
-  rationsView: RationView[] = [
-    new RationView("Hamburger",
-      0,
-      "Main-Ration",
-      "http://lechembasar-herzeliya.co.il/wp-content/uploads/sites/20/2017/04/hamburger-vechips.jpg",
-      60,
-      ["Chips", "Onion-Rings", "Cheese", "Puree"],
-      25),
-    new RationView("Pizza",
-      1,
-       "Main-Ration",
-      "https://d332juqdd9b8hn.cloudfront.net/wp-content/uploads/2019/05/pizzahutnewrecipe.jpg",
-      55,
-      ["Cheese", "Onion", "Olives", "Corn", "Pineapple", "Tomatoes"],
-      30),
-    new RationView("Soup",
-      2,
-      "First-Ration",
-      "https://www.inspiredtaste.net/wp-content/uploads/2018/10/Homemade-Vegetable-Soup-Recipe-2-1200.jpg",
-      30,
-      ["Vegetables", "Sweet-Potato", "Meat"],
-      15),
-    new RationView("Hummus-Plate",
-      3,
-      "First-Ration",
-      "https://besttv232-ynet-images1-prod.cdn.it.best-tv.com/PicServer2/24012010/3186566/4_wa.jpg",
-      15,
-      ["Falafel", "Mushrooms", "Spicy", "Tehina"],
-      5),
-      new RationView("Carrot-Salad",
-      4,
-      "First-Ration",
-      "http://www.10dakot.co.il/wp-content/uploads/2017/02/DSC_0081.jpg",
-      20,
-      ["Hot-Pepper", "Garlic-Sauce"],
-      7)
-  ];
-  
+beverages:Beverage[] = []
+
+  setRationsView()
+  {
+    this.http.get <RationView[]>('../assets/data/data-rations-view.json')
+    .subscribe(rations =>{
+      console.log(rations)
+     for(let i=0 ; i<rations.length ; i++) {
+      this.rationsView.push(new RationView(rations[i].name, rations[i].id, rations[i].category, rations[i].imageUrl, rations[i].price, rations[i].extras, rations[i].preparationTime))
+     }
+    })
+  }
+  setBeverages()
+  {
+    this.http.get<Beverage[]>('../assets/data/data-beverages.json')
+    .subscribe(beverages => {
+      for(let i=0 ; i<beverages.length ; i++) {
+        this.beverages.push(new Beverage(beverages[i].name, beverages[i].imageUrl, beverages[i].price));
+      }
+    })
+  }
+
   getMyOrder()
   {
     return this.myOrder;

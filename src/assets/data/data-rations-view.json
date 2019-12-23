@@ -1,0 +1,47 @@
+[
+    { 
+    "name" : "Hamburger",
+      "id" : 0,
+      "category" : "Main-Ration",
+      "imageUrl" : "http://lechembasar-herzeliya.co.il/wp-content/uploads/sites/20/2017/04/hamburger-vechips.jpg",
+      "price" : 60,
+      "extras" : ["Chips", "Onion-Rings", "Cheese", "Puree"],
+      "preparationTime" : 25
+    },
+    {
+        "name" : "Pizza",
+        "id" : 1,
+        "category" : "Main-Ration",
+        "imageUrl" : "https://d332juqdd9b8hn.cloudfront.net/wp-content/uploads/2019/05/pizzahutnewrecipe.jpg",
+        "price" :55,
+        "extras" :["Cheese", "Onion", "Olives", "Corn", "Pineapple", "Tomatoes"],
+        "preparationTime" : 30
+    },
+    {
+        "name" : "Soup",
+        "id" :  2,
+        "category" :"First-Ration",
+        "imageUrl" :"https://www.inspiredtaste.net/wp-content/uploads/2018/10/Homemade-Vegetable-Soup-Recipe-2-1200.jpg",
+        "price" :30,
+        "extras" :["Vegetables", "Sweet-Potato", "Meat"],
+        "preparationTime" :15
+    },
+    {
+        "name" : "Hummus-Plate",
+        "id" : 3,
+        "category" :"First-Ration",
+        "imageUrl" :"https://besttv232-ynet-images1-prod.cdn.it.best-tv.com/PicServer2/24012010/3186566/4_wa.jpg",
+        "price" :15,
+        "extras" :["Falafel", "Mushrooms", "Spicy", "Tehina"],
+        "preparationTime" : 5
+    },
+    {
+        "name" : "Carrot-Salad",
+        "id" : 4,
+        "category" :"First-Ration",
+        "imageUrl" :"http://www.10dakot.co.il/wp-content/uploads/2017/02/DSC_0081.jpg",
+        "price" :20,
+        "extras" :["Hot-Pepper", "Garlic-Sauce"],
+        "preparationTime" :7
+    }
+]
