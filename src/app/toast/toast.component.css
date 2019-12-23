@@ -2,7 +2,7 @@
 .toast {
     position: fixed;
     width: 400px;
-    height: 160px;
+    height: 180px;
     border: black 2px solid;
     left: calc(50% - 200px);
     background: white;
@@ -19,7 +19,7 @@
 }
 .toast_press_ok {
     opacity: 1;
-    top: calc(50% - 160px);
+    top: calc(50% - 180px);
     animation-name: toast_disappear;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
@@ -80,13 +80,13 @@
 
     0% {
         opacity: 0;
-        top: calc(40% - 160px);
+        top: calc(40% - 180px);
     }
     
    
     100% {
         opacity: 1;
-        top: calc(50% - 160px);
+        top: calc(50% - 180px);
     }  
 }
 
@@ -94,12 +94,12 @@
 
     0% {
         opacity: 1;
-        top: calc(50% - 160px);
+        top: calc(50% - 180px);
     }
    
     100% {
         opacity: 0;
-        top: calc(40% - 160px);
+        top: calc(40% - 180px);
     }  
 }
 

@@ -10,6 +10,7 @@
     box-sizing: border-box;
     opacity: 0.3;
     overflow: hidden;
+    margin-bottom: 3px;
 }
 .img_div img {
     width: 100%;
@@ -36,7 +37,7 @@
     font-family: 'Courier Prime', monospace;
     font-size: 26px;
     color: #dddd00;
-    margin:4px auto;
+    margin:0px auto;
     font-weight:lighter;
     -moz-box-shadow:none;  
     -webkit-box-shadow: none;  
@@ -45,6 +46,14 @@
    /* background-image: url("https://storage.needpix.com/rsynced_images/blue-diagonal-wood-background.jpg");  */
    padding-left: 15%;
    padding-right: 15%; 
+   background: rgba(0, 0, 0, 0.08);
+   padding-top: 1px;
+   margin-bottom: 3px;
+}
+.welcome h2 {
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(242,98,101,1), rgba(255,0,0,0));
+    padding: 4px;
+    margin-top: 8px;
 }
 .welcome span {
     animation-name: head_line_change;

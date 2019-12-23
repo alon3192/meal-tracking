@@ -1,7 +1,7 @@
 .toast {
     position: fixed;
     width: 400px;
-    height: 160px;
+    height: 130px;
     border: black 2px solid;
     left: calc(50% - 200px);
     background: white;
@@ -14,7 +14,7 @@
     background: white;
     font-family: 'Solway', serif;
     padding: 7px;
-    opacity: 0;   
+    opacity: 0;
 }
 
 .toast h3 {
@@ -44,6 +44,7 @@
     cursor: pointer; 
     margin-left: 10px;
     margin-right: 10px; 
+    box-shadow: 3px 6px #888888;
 }
 #yes {
     background: green;

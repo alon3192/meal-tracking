@@ -4,8 +4,7 @@
 }
 
 .border {
-    border: black 1px solid;
-    margin-top: 10px;
+    
     box-shadow: 5px 10px 8px 10px #888888;
     padding: 7px;
     background: white;
