@@ -1,7 +1,7 @@
 
 <div class="toast" [ngClass]="hasPushed()">
-    <h3>Delivery is not possible with less than {{minPriceToOrder}} Shekels.</h3>
-    <h3>You have to order in more {{ toSpend }}&#8362; to fill your order.</h3>
-    <button class="ok" (click)="onClick()">Got it</button>
+    <h3>Delivery is not possible with less than {{minPriceToOrder}}&#8362;.</h3>
+    <h3>You have to order in more {{ toSpend }}&#8362; to reach the minimum price.</h3>
+    <button class="ok" (click)="onClick()">OK</button>
 </div>
 <div  class="disabled_screen" [ngClass]="enableScreen()"></div>

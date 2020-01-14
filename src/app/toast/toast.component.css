@@ -2,7 +2,7 @@
 .toast {
     position: fixed;
     width: 400px;
-    height: 180px;
+    height: 160px;
     border: black 2px solid;
     left: calc(50% - 200px);
     background: white;
@@ -43,6 +43,7 @@
     font-family: 'Solway', serif;
     box-sizing: border-box;
     cursor: pointer;
+    box-shadow: 3px 6px #888888;
 }
 
 .ok:hover {
@@ -127,7 +128,7 @@
     
     .toast {
         width: 270px;
-        height: 200px;
+        height: 230px;
         top: calc(50% - 100px);
         left: calc(50% - 135px);
         box-sizing: border-box;

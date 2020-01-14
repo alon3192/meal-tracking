@@ -37,10 +37,7 @@ export class DeliveryComponent implements OnInit, OnDestroy {
       (done:boolean) => {
         this.isOrdered = done;
         this.timeToWait = this.myOrder.preparationTime * 60;
-        
         this.timerBegin();
-
-       /* document.getElementById("cycle_div").style.animationDelay = "13s"/*"" + (this.timeToWait * this.dataService.fastingLevel) + "ms"*/;
       }
     );
 

@@ -49,8 +49,14 @@
 #yes {
     background: green;
 }
+#yes:hover {
+    background: rgb(95, 224, 134);
+}
 #no {
     background: red;
+}
+#no:hover {
+    background: rgb(225, 176, 176);
 }
 
 

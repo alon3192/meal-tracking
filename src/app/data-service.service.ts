@@ -30,16 +30,18 @@ export class DataService {
   minPriceToOrder = 80;
   toastModeChanged = new Subject<boolean>();
 
-beverages:Beverage[] = []
+  beveragesEmitter = new Subject<Beverage[]>();
+  rationsEmitter = new Subject<RationView[]>();
+  beverages:Beverage[] = []
 
   setRationsView()
   {
     this.http.get <RationView[]>('../assets/data/data-rations-view.json')
     .subscribe(rations =>{
-      console.log(rations)
      for(let i=0 ; i<rations.length ; i++) {
       this.rationsView.push(new RationView(rations[i].name, rations[i].id, rations[i].category, rations[i].imageUrl, rations[i].price, rations[i].extras, rations[i].preparationTime))
      }
+     this.rationsEmitter.next(this.rationsView);
     })
   }
   setBeverages()
@@ -49,6 +51,7 @@ beverages:Beverage[] = []
       for(let i=0 ; i<beverages.length ; i++) {
         this.beverages.push(new Beverage(beverages[i].name, beverages[i].imageUrl, beverages[i].price));
       }
+      this.beveragesEmitter.next(this.beverages);
     })
   }
 
